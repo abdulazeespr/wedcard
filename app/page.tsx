@@ -114,6 +114,10 @@ function WeddingApp() {
     setRsvpTab('list');
   };
 
+  const handleGetDirections = () => {
+    window.open('https://maps.app.goo.gl/orNgYG5edZFSbN7eA', '_blank');
+  };
+
   const handleBlessingSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!blessingsName.trim() || !blessingsMessage.trim()) return;
@@ -600,7 +604,8 @@ function WeddingApp() {
                   <div className="text-4xl">🏰</div>
 
                   {/* Get Directions Button */}
-                  <button className="w-full px-6 py-3 border-2 border-white text-white font-semibold uppercase text-sm tracking-wider rounded-full hover:bg-white hover:text-black transition-all duration-300">
+                  <button className="w-full px-6 py-3 border-2 border-white text-white font-semibold uppercase text-sm tracking-wider rounded-full hover:bg-white hover:text-black transition-all duration-300"
+                    onClick={() => handleGetDirections()}>
                     Get Directions
                   </button>
                 </div>
