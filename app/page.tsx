@@ -578,21 +578,21 @@ function WeddingApp() {
             <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Content */}
-            <div className="relative h-full w-full flex items-center justify-between px-8 md:px-16 lg:px-24 animate-on-scroll opacity-0">
+            <div className="relative h-full w-full flex flex-col md:flex-row items-start md:items-center justify-center md:justify-between px-8 md:px-16 lg:px-24 py-16 md:py-0 animate-on-scroll opacity-0 gap-8">
               {/* Left Side - Text */}
-              <div className="text-white max-w-lg">
+              <div className="text-white max-w-lg mt-12 md:mt-0">
                 {/* Label */}
-                <p className="text-xs uppercase tracking-widest mb-6 text-purple-300 font-light">
+                <p className="text-xs uppercase tracking-widest mb-4 md:mb-6 text-purple-300 font-light">
                   The Venue
                 </p>
 
                 {/* Main Heading */}
-                <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
                   City Palace <br /> Auditorium
                 </h2>
 
                 {/* Location */}
-                <p className="text-lg md:text-xl font-light text-gray-200">
+                <p className="text-base sm:text-lg md:text-xl font-light text-gray-200">
                   Kechery, Thrissur, Kerala
                 </p>
               </div>
@@ -612,8 +612,9 @@ function WeddingApp() {
               </div>
 
               {/* Mobile Buttons */}
-              <div className="lg:hidden fixed bottom-8 left-0 right-0 px-4 flex justify-center">
-                <button className="px-8 py-3 border-2 border-white text-white font-semibold uppercase text-sm tracking-wider rounded-full hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm">
+              <div className="lg:hidden w-full mb-12 md:mb-0">
+                <button className="w-full sm:w-auto px-8 py-3 border-2 border-white text-white font-semibold uppercase text-sm tracking-wider rounded-full hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
+                  onClick={() => handleGetDirections()}>
                   Get Directions
                 </button>
               </div>
