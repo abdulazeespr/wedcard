@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Fayez & Hasna Wedding Invitation",
     description: "You are cordially invited to the reception ceremony of Fayez & Hasna.",
     images: ["@file:social_image.jpg"],
-    url: "https://wedcard-puce.vercel.app/social_image.jpg",
+    url: "https://wedcard-puce.vercel.app/social_image.png",
   },
 };
 
