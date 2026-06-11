@@ -19,8 +19,11 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "Roshan & Hajara Wedding Invitation",
-  description: "You are cordially invited to the reception ceremony of Mohammed Roshan & Hajara Sherin.",
+  title: "Fayez & Hasna Wedding Invitation",
+  description: "You are cordially invited to the reception ceremony of Fayez & Hasna.",
+  openGraph: {
+    images: ["@file:social_image.jpg"],
+  },
 };
 
 export default function RootLayout({
