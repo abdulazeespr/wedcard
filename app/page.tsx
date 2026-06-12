@@ -1161,7 +1161,7 @@ function WeddingApp() {
                 >
                   Attending Guests
                 </p>
-                <div className="divide-y max-h-[400px] overflow-y-auto pr-1" style={{ divideColor: 'rgba(139,111,71,0.1)' }}>
+                <div className="divide-y divide-[rgba(139,111,71,0.1)] max-h-[400px] overflow-y-auto pr-1">
                   {rsvps.map((rsvp, idx) => (
                     <div key={idx} className="py-4 flex justify-between items-center gap-4">
                       <div>
