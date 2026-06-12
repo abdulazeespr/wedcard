@@ -322,17 +322,17 @@ function WeddingApp() {
                 Wedding Ceremony
               </p>
 
-              {/* Wax Seal "TAP TO OPEN" Button */}
-              <div className="flex flex-col items-center justify-center gap-4 mt-4">
+              {/* Premium "TAP TO OPEN" Button */}
+              <div className="flex flex-col items-center justify-center gap-5 mt-4">
                 <button
                   ref={buttonRef}
                   onClick={handleViewDetails}
-                  className="w-24 h-24 rounded-full bg-[#5D4874] border-4 border-[#8469A3]/50 outline outline-2 outline-[#5D4874] outline-offset-4 flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(93,72,116,0.6)] cursor-pointer"
+                  className="w-32 h-32 rounded-full bg-black/10 backdrop-blur-[2px] border-[1px] border-[#e5c158]/60 flex items-center justify-center shadow-[0_0_30px_rgba(0,0,0,0.3)] transition-all duration-500 hover:scale-105 hover:bg-black/20 hover:border-[#e5c158] hover:shadow-[0_0_40px_rgba(229,193,88,0.2)] cursor-pointer"
                 >
-                  <span className="font-[family-name:var(--font-great-vibes)] text-4xl text-white">F&H</span>
+                  <span className="font-[family-name:var(--font-great-vibes)] text-4xl text-[#e5c158] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">F&H</span>
                 </button>
-                <p className="text-sm font-semibold tracking-[0.2em] text-[#e5c158] uppercase flex items-center gap-1 animate-pulse">
-                  ✨ TAP TO OPEN ✨
+                <p className="text-xs font-medium tracking-[0.25em] text-[#e5c158]/90 uppercase flex items-center gap-2 animate-pulse drop-shadow-md">
+                  ✦ Tap to Open ✦
                 </p>
               </div>
             </div>
@@ -349,7 +349,7 @@ function WeddingApp() {
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: 'url(/receptionpic.jpeg)',
+                backgroundImage: 'url(/wedding.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -362,71 +362,70 @@ function WeddingApp() {
               {/* Watermark & Guest Greeting Section */}
               <div className="relative w-full mb-6 py-6 flex flex-col items-center justify-center">
                 {/* Watermark Text */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-0">
-                  <span className="text-white/[0.08] font-serif text-5xl md:text-[5.5rem] tracking-[0.2em] leading-none uppercase">
-                    RECEPTION
-                  </span>
-                  <span className="text-white/[0.08] font-serif text-5xl md:text-[5.5rem] tracking-[0.2em] leading-none uppercase mt-3">
-                    CELEBRATION
-                  </span>
-                </div>
+               
 
                 {/* Guest Greeting */}
                 {guestName && (
                   <div className="relative z-10 text-center">
-                    <p className="text-sm md:text-base font-light italic mb-2 tracking-wide text-white/95">Dear</p>
-                    <h2 className="text-4xl md:text-5xl font-medium tracking-wide text-[#E9C46A] drop-shadow-md">
+                    <p className="text-sm md:text-base font-light italic mb-2 tracking-[0.15em] text-[#f5e6d0]/90" style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}>Dear</p>
+                    <h2 className="text-4xl md:text-5xl font-[family-name:var(--font-great-vibes)] tracking-wide text-[#E9C46A] drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                       {guestName}
                     </h2>
                   </div>
                 )}
               </div>
 
-              <p className="text-xs md:text-sm font-light tracking-[0.1em] text-white/90 mb-8 max-w-md mx-auto">
+              <p className="text-base md:text-lg tracking-[0.12em] text-[#f5e8d4] mb-8 max-w-md mx-auto leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]" style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 400 }}>
                 You are cordially invited to the reception ceremony of
               </p>
 
               {/* Basmala */}
-              <div className="flex flex-col items-center justify-center mb-8">
-                <p className="text-2xl md:text-3xl font-light text-white leading-relaxed tracking-wide select-none">
+              <div className="flex flex-col items-center justify-center mb-10">
+                <p className="text-3xl md:text-4xl text-[#f0d48a] leading-relaxed tracking-wider select-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]" style={{ fontWeight: 500 }}>
                   بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
                 </p>
-                <div className="w-20 h-[1.5px] bg-[#e5c158] mt-3 opacity-80"></div>
+                {/* Ornamental divider */}
+                <div className="flex items-center gap-3 mt-4">
+                  <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#E9C46A]/70"></div>
+                  <span className="text-[#E9C46A]/60 text-xs">✦</span>
+                  <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-[#E9C46A]/70"></div>
+                </div>
               </div>
 
               {/* Couple Names */}
-              <div className="flex flex-col items-center gap-3 mb-8">
-                <div className="inline-block bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl px-12 py-3.5 shadow-xl min-w-[280px] md:min-w-[340px]">
-                  <h1 className="text-4xl md:text-5xl font-[family-name:var(--font-great-vibes)] text-[#5D4874] tracking-wide">
-                    Fayez
-                  </h1>
-                </div>
-                <p className="text-2xl font-light text-white my-1 font-serif">&</p>
-                <div className="inline-block bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl px-12 py-3.5 shadow-xl min-w-[280px] md:min-w-[340px]">
-                  <h1 className="text-4xl md:text-5xl font-[family-name:var(--font-great-vibes)] text-[#5D4874] tracking-wide">
-                    Hasna
-                  </h1>
-                </div>
+              <div className="flex flex-col items-center gap-1 mb-10">
+                <h1 className="text-6xl md:text-7xl font-[family-name:var(--font-great-vibes)] text-[#FFF8EE] tracking-wide drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]">
+                  Fayez
+                </h1>
+                <p className="text-3xl font-[family-name:var(--font-great-vibes)] text-[#E9C46A] my-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">&</p>
+                <h1 className="text-6xl md:text-7xl font-[family-name:var(--font-great-vibes)] text-[#FFF8EE] tracking-wide drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]">
+                  Hasna
+                </h1>
               </div>
 
               {/* Date and Time */}
-              <div className="mt-8 flex flex-col items-center">
-                <p className="text-xs font-semibold tracking-[0.3em] text-white/90 mb-3 uppercase">
+              <div className="mt-6 flex flex-col items-center">
+                <p className="text-[11px] tracking-[0.35em] text-[#E9C46A]/90 mb-3 uppercase" style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 600 }}>
                   SUNDAY
                 </p>
                 <div className="flex items-center justify-center gap-4 w-full max-w-lg px-4">
-                  <div className="flex-1 max-w-[60px] h-[1px] bg-[#e5c158] opacity-80"></div>
-                  <p className="text-2xl md:text-3xl font-semibold tracking-wide text-white whitespace-nowrap">
-                    July 26, 2026 | 10:00 AM
+                  <div className="flex-1 max-w-[50px] h-[1px] bg-gradient-to-r from-transparent to-[#E9C46A]/60"></div>
+                  <p className="text-xl md:text-2xl tracking-[0.05em] text-[#FFF8EE] whitespace-nowrap drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]" style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 500 }}>
+                    July 26, 2026 &nbsp;|&nbsp; 10:00 AM
                   </p>
-                  <div className="flex-1 max-w-[60px] h-[1px] bg-[#e5c158] opacity-80"></div>
+                  <div className="flex-1 max-w-[50px] h-[1px] bg-gradient-to-l from-transparent to-[#E9C46A]/60"></div>
                 </div>
               </div>
 
               {/* Scroll Down */}
-              <p className="text-[10px] md:text-xs font-semibold tracking-[0.3em] text-white/80 mt-16 animate-bounce uppercase">
-                SCROLL DOWN
-              </p>
+              <div className="mt-16 flex flex-col items-center gap-2">
+                <p className="text-[10px] md:text-[11px] tracking-[0.35em] text-[#E9C46A]/70 uppercase animate-bounce" style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 600 }}>
+                  SCROLL DOWN
+                </p>
+                <svg className="w-4 h-4 text-[#E9C46A]/50 animate-bounce" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </div>
             </div>
           </header>
 
@@ -516,14 +515,14 @@ function WeddingApp() {
                     <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-[#7A6A88] -translate-x-1/2 border-2 border-[#FFFDF9] shadow-sm z-10 top-1 md:top-auto"></div>
                     
                     <div className="w-full md:w-1/2 pl-16 md:pl-12 mt-1 md:mt-0 text-left">
-                      <p className="font-bold text-sm text-[#7A6A88]">10:00 AM</p>
+                      <p className="font-bold text-sm text-[#7A6A88]">11:00 AM</p>
                     </div>
                   </div>
 
                   {/* Event 2 (Right on Desktop) */}
                   <div className="relative flex flex-col md:flex-row items-start md:items-center w-full">
                     <div className="hidden md:flex w-1/2 justify-end pr-12">
-                      <p className="font-bold text-sm text-[#7A6A88]">11:00 AM</p>
+                      <p className="font-bold text-sm text-[#7A6A88]">11:30 AM</p>
                     </div>
                     
                     {/* Dot */}
@@ -532,7 +531,7 @@ function WeddingApp() {
                     <div className="w-full md:w-1/2 pl-16 md:pl-12 flex flex-col items-start text-left">
                       <h3 className="text-xl font-bold text-[#564A62]">Wedding Ceremony</h3>
                       <p className="text-[10px] md:text-xs uppercase tracking-widest text-[#9A8CA1] mt-1">Welcome & Greetings</p>
-                      <p className="font-bold text-sm text-[#7A6A88] mt-1 md:hidden">11:00 AM</p>
+                      <p className="font-bold text-sm text-[#7A6A88] mt-1 md:hidden">11:30 AM</p>
                     </div>
                   </div>
 
@@ -547,14 +546,14 @@ function WeddingApp() {
                     <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-[#7A6A88] -translate-x-1/2 border-2 border-[#FFFDF9] shadow-sm z-10 top-1 md:top-auto"></div>
                     
                     <div className="w-full md:w-1/2 pl-16 md:pl-12 mt-1 md:mt-0 text-left">
-                      <p className="font-bold text-sm text-[#7A6A88]">12:30 PM</p>
+                      <p className="font-bold text-sm text-[#7A6A88]">11:30 AM</p>
                     </div>
                   </div>
 
                   {/* Event 4 (Right on Desktop) */}
                   <div className="relative flex flex-col md:flex-row items-start md:items-center w-full">
                     <div className="hidden md:flex w-1/2 justify-end pr-12">
-                      <p className="font-bold text-sm text-[#7A6A88]">12:30 PM</p>
+                      <p className="font-bold text-sm text-[#7A6A88]">11:30 AM</p>
                     </div>
                     
                     {/* Dot */}
@@ -563,7 +562,7 @@ function WeddingApp() {
                     <div className="w-full md:w-1/2 pl-16 md:pl-12 flex flex-col items-start text-left">
                       <h3 className="text-xl font-bold text-[#564A62]">Photo Windup</h3>
                       <p className="text-[10px] md:text-xs uppercase tracking-widest text-[#9A8CA1] mt-1">Smiling Faces & Happy Traces 📸 ✨</p>
-                      <p className="font-bold text-sm text-[#7A6A88] mt-1 md:hidden">12:30 PM</p>
+                      <p className="font-bold text-sm text-[#7A6A88] mt-1 md:hidden">11:30 AM</p>
                     </div>
                   </div>
 
@@ -659,7 +658,7 @@ function WeddingApp() {
                   Will you join us?
                 </h2>
                 <p className="text-xs italic text-[#8469A3] mb-8">
-                  Please kindly respond by June 15th
+                  Please kindly respond by July 20th
                 </p>
 
                 <form onSubmit={handleRsvpSubmit} className="space-y-6 text-left">
@@ -850,8 +849,8 @@ function WeddingApp() {
                 REGARDS FAMILIES OF:
               </p>
               <div className="space-y-4 font-[family-name:var(--font-great-vibes)] text-3xl md:text-4xl text-[#5D4874]">
-                <p>Hayyan && Hani</p>
-                <p>Hezlin && Hiyam</p>
+                <p>Hayyan & Hani</p>
+                <p>Hezlin & Hiyam</p>
               </div>
             </div>
           </section>
