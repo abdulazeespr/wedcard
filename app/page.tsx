@@ -440,21 +440,7 @@ function WeddingApp() {
                 You are cordially invited to the wedding ceremony of
               </p>
 
-              {/* Basmala */}
-              <div className="flex flex-col items-center justify-center mb-10 mt-2">
-                <p
-                  className="text-4xl sm:text-5xl md:text-6xl text-[#C9A96E] leading-relaxed tracking-wider select-none drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]"
-                  style={{ direction: 'rtl' }}
-                >
-                  بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
-                </p>
-                {/* Shimmer divider */}
-                <div className="flex items-center gap-4 mt-6">
-                  <div className="w-14 sm:w-20 h-px bg-gradient-to-r from-transparent to-[#C9A96E]/60" />
-                  <span className="text-[#C9A96E]/50 text-xs">✦</span>
-                  <div className="w-14 sm:w-20 h-px bg-gradient-to-l from-transparent to-[#C9A96E]/60" />
-                </div>
-              </div>
+              
 
               {/* Couple Names */}
               <div className="flex flex-col items-center gap-0 mb-8 mt-4">
