@@ -283,7 +283,7 @@ function WeddingApp() {
                   />
                   <span
                     className="text-2xl sm:text-3xl text-[#C9A96E] whitespace-nowrap"
-                    style={{ fontFamily: 'var(--font-great-vibes)' }}
+                    style={{ fontFamily: 'Playfair Display' }}
                   >
                     F♥H
                   </span>
