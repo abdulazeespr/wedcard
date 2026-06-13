@@ -285,7 +285,7 @@ function WeddingApp() {
                     className="text-3xl text-[#C9A96E]"
                     style={{ fontFamily: 'var(--font-great-vibes)' }}
                   >
-                    F&H
+                    F ♥ H
                   </span>
                 </div>
                 <p
@@ -318,12 +318,12 @@ function WeddingApp() {
                 Fayez
               </h1>
 
-              {/* Ampersand */}
+              {/* Heart Symbol */}
               <div
                 className="ampersand text-5xl sm:text-6xl my-2 text-[#C9A96E] opacity-0 drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
                 style={{ fontFamily: 'var(--font-great-vibes)' }}
               >
-                &
+                ♥
               </div>
 
               {/* Name 2 */}
@@ -367,9 +367,9 @@ function WeddingApp() {
                 >
                   <span
                     className="text-4xl sm:text-5xl text-[#C9A96E] drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
-                    style={{ fontFamily: 'var(--font-great-vibes)' }}
+                    style={{ fontFamily: 'Playfair Display' }}
                   >
-                    F&H
+                    F ♥ H
                   </span>
                 </button>
 
@@ -399,7 +399,7 @@ function WeddingApp() {
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: 'url(/wedding.png)',
+                backgroundImage: 'url(/wedding.jpeg)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center top',
               }}
@@ -454,7 +454,7 @@ function WeddingApp() {
                   className="text-4xl sm:text-5xl text-[#C9A96E] my-2 drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
                   style={{ fontFamily: 'var(--font-great-vibes)' }}
                 >
-                  &
+                  ♥
                 </p>
                 <h1
                   className="text-6xl sm:text-7xl md:text-8xl text-white tracking-wide drop-shadow-[0_2px_16px_rgba(0,0,0,0.5)]"
